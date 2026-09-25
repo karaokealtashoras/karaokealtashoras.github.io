@@ -168,15 +168,12 @@ ul { margin: 0; padding: 0; list-style: none; }
     linear-gradient(90deg, rgba(14,13,21,.96) 0%, rgba(14,13,21,.82) 45%, rgba(14,13,21,.55) 100%),
     linear-gradient(0deg, var(--bg) 0%, transparent 30%);
 }
-.hero__grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 48px; align-items: center; }
+.hero__grid { max-width: 760px; }
 .hero__slogan { font-family: var(--script); font-size: clamp(24px, 3vw, 34px); color: #ffc6ec; text-shadow: 0 0 18px rgba(224, 64, 155, .8), 0 0 40px rgba(224, 64, 155, .4); margin-top: 22px; line-height: 1.2; }
 .hero h1 { font-weight: 900; text-transform: uppercase; font-size: clamp(44px, 8vw, 92px); line-height: .9; letter-spacing: -0.04em; margin-top: 12px; }
 .hero__sub { color: var(--muted); font-size: clamp(15px, 1.8vw, 18px); margin-top: 22px; max-width: 46ch; }
 .hero__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
 
-.hero__story { justify-self: end; width: min(340px, 100%); aspect-ratio: 9 / 16; position: relative; border-radius: 28px; overflow: hidden; box-shadow: 0 30px 80px -20px rgba(123, 63, 228, .6), 0 0 0 1px rgba(255,255,255,.1); transform: rotate(2deg); }
-.hero__story img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .8s ease; }
-.hero__story img.is-active { opacity: 1; }
 
 .info-strip { margin-top: clamp(40px, 7vw, 72px); display: grid; grid-template-columns: repeat(3, 1fr); border-radius: var(--radius); border: 1px solid var(--line-2); background: rgba(28, 27, 35, .6); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
 .info-strip__item { display: flex; align-items: center; gap: 14px; padding: 18px 22px; }
@@ -409,9 +406,8 @@ textarea.input { min-height: 88px; resize: vertical; }
 
 @media (max-width: 900px) {
   :root { --nav-h: 64px; }
-  .hero__grid, .about__grid, .booking__grid, .location__grid { grid-template-columns: 1fr; }
-  .hero__story { display: none; }
-  .hero { min-height: auto; padding-top: calc(var(--nav-h) + 48px); }
+  .about__grid, .booking__grid, .location__grid { grid-template-columns: 1fr; }
+    .hero { min-height: auto; padding-top: calc(var(--nav-h) + 48px); }
   .info-strip { grid-template-columns: 1fr; }
   .info-strip__item + .info-strip__item { border-left: 0; border-top: 1px solid var(--line); }
   .about__media { margin: 0 12px 40px 12px; }

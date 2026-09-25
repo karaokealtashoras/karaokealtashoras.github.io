@@ -21,17 +21,6 @@ menu.querySelector("[data-close-menu]").addEventListener("click", () => setMenu(
 menu.querySelectorAll("nav a").forEach((a) => a.addEventListener("click", () => setMenu(false)));
 document.addEventListener("keydown", (e) => { if (e.key === "Escape") setMenu(false); });
 
-/* Stories do hero */
-const stories = document.querySelectorAll(".hero__story img");
-if (stories.length > 1 && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
-  let atual = 0;
-  setInterval(() => {
-    stories[atual].classList.remove("is-active");
-    atual = (atual + 1) % stories.length;
-    stories[atual].classList.add("is-active");
-  }, 4000);
-}
-
 /* Preços vindos do cardápio (data/cardapio.js) */
 if (window.CARDAPIO) {
   const precos = new Map();
@@ -61,7 +50,7 @@ document.querySelectorAll("[data-filter]").forEach((btn) => {
   btn.addEventListener("click", () => {
     const f = btn.dataset.filter;
     document.querySelectorAll("[data-filter]").forEach((b) => b.setAttribute("aria-pressed", String(b === btn)));
-    itens.forEach((it) => { it.hidden = f !== "todos" && it.dataset.cat !== f; });
+    itens.forEach((it) => { it.hidden = it.dataset.cat !== f; });
   });
 });
 
