@@ -12,21 +12,21 @@ window.CARDAPIO = {
       "id": "porcoes",
       "nome": "Porções",
       "itens": [
-        { "nome": "Provolone à milanesa", "preco": 75 },
-        { "nome": "Filé de peixe à milanesa", "preco": 75 },
-        { "nome": "Carne seca com mandioca", "preco": 75 },
-        { "nome": "Filé aperitivo", "preco": 75 },
-        { "nome": "Costelinha de porco (frita)", "preco": 65 },
+        { "nome": "Provolone à milanesa", "foto": "provolone", "preco": 75 },
+        { "nome": "Filé de peixe à milanesa", "foto": "file-peixe", "preco": 75 },
+        { "nome": "Carne seca com mandioca", "foto": "carne-seca", "preco": 75 },
+        { "nome": "Filé aperitivo", "foto": "file-aperitivo", "preco": 75 },
+        { "nome": "Costelinha de porco (frita)", "foto": "costelinha", "preco": 65 },
         { "nome": "Frango a passarinho", "preco": 65, "foto": "frango-passarinho", "destaque": true },
         { "nome": "Calabresa acebolada", "preco": 75, "foto": "calabresa", "destaque": true },
-        { "nome": "Frios", "descricao": "Salame, queijo e azeitona", "preco": 65 },
-        { "nome": "Azeitona", "preco": 25 },
-        { "nome": "Salame", "preco": 43 },
+        { "nome": "Frios", "foto": "frios", "descricao": "Salame, queijo e azeitona", "preco": 65 },
+        { "nome": "Azeitona", "foto": "azeitona", "preco": 25 },
+        { "nome": "Salame", "foto": "salame", "preco": 43 },
         { "nome": "Queijo", "preco": 43, "foto": "queijo", "destaque": true },
-        { "nome": "Mandioca frita", "preco": 35 },
-        { "nome": "Amendoim", "preco": 15 },
-        { "nome": "Polenta", "preco": 45 },
-        { "nome": "Batata frita", "preco": 45 }
+        { "nome": "Mandioca frita", "foto": "mandioca", "preco": 35 },
+        { "nome": "Amendoim", "foto": "amendoim", "preco": 15 },
+        { "nome": "Polenta", "foto": "polenta", "preco": 45 },
+        { "nome": "Batata frita", "foto": "batata-frita", "preco": 45 }
       ],
       "adicionais": [
         { "nome": "Batata frita com bacon", "preco": 10, "tipo": "acréscimo" },
@@ -50,7 +50,7 @@ window.CARDAPIO = {
       "nome": "Cerveja garrafa",
       "itens": [
         { "nome": "Original / Brahma Duplo Malte / Império", "descricao": "600 ml", "preco": 20 },
-        { "nome": "Heineken", "descricao": "600 ml", "preco": 25 },
+        { "nome": "Heineken", "foto": "heineken", "descricao": "600 ml", "preco": 25 },
         { "nome": "Skol / Brahma Chopp", "descricao": "600 ml", "preco": 18 }
       ]
     },
