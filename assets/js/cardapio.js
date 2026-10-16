@@ -17,10 +17,10 @@
       ? `<img class="item__foto" src="../assets/img/cardapio/${esc(i.foto)}-800.webp" alt="" loading="lazy" width="64" height="64">`
       : "";
     return `
-      <li class="item${i.destaque ? " item--destaque" : ""}" data-busca="${esc(normal(`${i.nome} ${i.descricao || ""} ${c.nome} ${i.tags || ""}`))}">
+      <li class="item${i.destaque ? " item--destaque" : ""}" data-busca="${esc(normal(`${i.nome} ${i.volume || ""} ${i.descricao || ""} ${c.nome} ${i.tags || ""}`))}">
         ${foto}
         <div class="item__txt">
-          <h3>${esc(i.nome)}</h3>
+          <h3>${esc(i.nome)}${i.volume ? ` <small class="item__vol">${esc(i.volume)}</small>` : ""}</h3>
           ${i.descricao ? `<p>${esc(i.descricao)}</p>` : ""}
         </div>
         <span class="item__preco${i.preco == null ? " item__preco--consulte" : ""}">${moeda(i.preco)}</span>

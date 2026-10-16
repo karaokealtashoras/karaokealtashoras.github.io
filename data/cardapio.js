@@ -1,5 +1,6 @@
 // Cardápio do Altas Horas Karaokê.
 // Para atualizar: edite nomes/preços abaixo e salve. "preco": null = "Consulte".
+// "volume" (opcional) = ex. "350 ml", aparece menor ao lado do nome.
 // "tags" (opcional) = sinônimos extras para a busca.
 // "foto" usa as imagens de assets/img/cardapio/ ; "destaque": true aparece na home.
 window.CARDAPIO = {
@@ -38,35 +39,36 @@ window.CARDAPIO = {
       "id": "sem-alcool",
       "nome": "Não alcoólicos",
       "itens": [
-        { "nome": "Água com ou sem gás", "preco": 8 },
-        { "nome": "Refrigerante lata", "tags": "refri", "preco": 10 },
-        { "nome": "Schweppes", "tags": "refri", "preco": 12 },
-        { "nome": "Água tônica", "preco": 12 },
-        { "nome": "H2O", "tags": "refri", "preco": 12 },
+        { "nome": "Água", "volume": "500 ml", "descricao": "Com ou sem gás", "preco": 8 },
+        { "nome": "Refrigerante Lata Coca-Cola", "volume": "350 ml", "descricao": "Tradicional ou zero", "tags": "refri coca", "preco": 10 },
+        { "nome": "Refrigerante Lata Guaraná Antarctica", "volume": "350 ml", "descricao": "Tradicional ou zero", "tags": "refri guarana antartica", "preco": 10 },
+        { "nome": "Refrigerante Lata Fanta", "volume": "350 ml", "tags": "refri", "preco": 10 },
+        { "nome": "Tônica Schweppes", "descricao": "Tradicional ou zero", "tags": "agua tonica", "preco": 12 },
+        { "nome": "H2O", "volume": "500 ml", "tags": "refri", "preco": 12 },
         { "nome": "Suco de fruta", "descricao": "Verificar disponibilidade das frutas", "preco": 16 },
-        { "nome": "Energético Red Bull", "preco": 20 }
+        { "nome": "Energético Red Bull", "volume": "250 ml", "preco": 20 }
       ]
     },
     {
       "id": "cerveja-garrafa",
       "nome": "Cervejas 600 ml",
       "itens": [
-        { "nome": "Cerveja Original 600 ml", "preco": 20 },
-        { "nome": "Cerveja Brahma Duplo Malte 600 ml", "preco": 20 },
-        { "nome": "Cerveja Império 600 ml", "preco": 20 },
-        { "nome": "Cerveja Heineken 600 ml", "foto": "heineken", "preco": 25 },
-        { "nome": "Cerveja Skol 600 ml", "preco": 18 },
-        { "nome": "Cerveja Brahma Chopp 600 ml", "preco": 18 }
+        { "nome": "Cerveja Original", "volume": "600 ml", "preco": 20 },
+        { "nome": "Cerveja Brahma Duplo Malte", "volume": "600 ml", "preco": 20 },
+        { "nome": "Cerveja Império", "volume": "600 ml", "preco": 20 },
+        { "nome": "Cerveja Heineken", "volume": "600 ml", "foto": "heineken", "preco": 25 },
+        { "nome": "Cerveja Skol", "volume": "600 ml", "preco": 18 },
+        { "nome": "Cerveja Brahma Chopp", "volume": "600 ml", "preco": 18 }
       ]
     },
     {
       "id": "cerveja-lata",
       "nome": "Cervejas lata",
       "itens": [
-        { "nome": "Cerveja Lata Skol", "preco": 15 },
-        { "nome": "Cerveja Lata Brahma", "preco": 15 },
-        { "nome": "Cerveja Lata Malzbier", "preco": 15 },
-        { "nome": "Cerveja Lata Brahma Zero", "tags": "sem alcool", "preco": 15 }
+        { "nome": "Cerveja Lata Skol", "volume": "350 ml", "preco": 15 },
+        { "nome": "Cerveja Lata Brahma", "volume": "350 ml", "preco": 15 },
+        { "nome": "Cerveja Lata Malzbier", "volume": "350 ml", "preco": 15 },
+        { "nome": "Cerveja Lata Brahma Zero", "volume": "350 ml", "tags": "sem alcool", "preco": 15 }
       ]
     },
     {
@@ -113,6 +115,7 @@ window.CARDAPIO = {
     {
       "id": "doses",
       "nome": "Destilados e cachaças",
+      "nota": "Valores por dose",
       "itens": [
         { "nome": "Vodka Smirnoff", "tags": "dose", "preco": 25 },
         { "nome": "Rum", "tags": "dose", "preco": 25 },
@@ -128,6 +131,7 @@ window.CARDAPIO = {
     {
       "id": "aperitivos",
       "nome": "Aperitivos e licores",
+      "nota": "Valores por dose",
       "itens": [
         { "nome": "Campari", "tags": "dose", "preco": 25 },
         { "nome": "Martini", "tags": "dose vermute", "preco": 20 },
@@ -152,7 +156,7 @@ window.CARDAPIO = {
       "id": "drinks",
       "nome": "Outros drinks",
       "itens": [
-        { "nome": "Chopp de vinho", "preco": 23 },
+        { "nome": "Chopp de vinho Draft", "volume": "600 ml", "tags": "chope", "preco": 23 },
         { "nome": "Coquetel de frutas", "preco": 35 }
       ]
     },
