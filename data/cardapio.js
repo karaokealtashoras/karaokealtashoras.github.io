@@ -40,14 +40,20 @@ window.CARDAPIO = {
       "nome": "Não alcoólicos",
       "itens": [
         { "nome": "Água", "volume": "500 ml", "descricao": "Com ou sem gás", "preco": 8 },
-        { "nome": "Refrigerante Lata Coca-Cola", "volume": "350 ml", "descricao": "Tradicional ou zero", "tags": "refri coca", "preco": 10 },
-        { "nome": "Refrigerante Lata Guaraná Antarctica", "volume": "350 ml", "descricao": "Tradicional ou zero", "tags": "refri guarana antartica", "preco": 10 },
-        { "nome": "Refrigerante Lata Fanta", "volume": "350 ml", "tags": "refri", "preco": 10 },
-        { "nome": "Schweppes Citrus", "volume": "350 ml", "tags": "refri", "preco": 12 },
         { "nome": "Água Tônica Antarctica", "volume": "350 ml", "descricao": "Tradicional ou zero", "tags": "tonica antartica", "preco": 12 },
         { "nome": "H2O", "volume": "500 ml", "tags": "refri", "preco": 12 },
         { "nome": "Suco de fruta", "descricao": "Verificar disponibilidade das frutas", "preco": 16 },
         { "nome": "Energético Red Bull", "volume": "250 ml", "preco": 20 }
+      ]
+    },
+    {
+      "id": "refrigerantes",
+      "nome": "Refrigerantes",
+      "itens": [
+        { "nome": "Refrigerante Lata Coca-Cola", "volume": "350 ml", "descricao": "Tradicional ou zero", "tags": "refri coca", "preco": 10 },
+        { "nome": "Refrigerante Lata Guaraná Antarctica", "volume": "350 ml", "descricao": "Tradicional ou zero", "tags": "refri guarana antartica", "preco": 10 },
+        { "nome": "Refrigerante Lata Fanta", "volume": "350 ml", "tags": "refri", "preco": 10 },
+        { "nome": "Schweppes Citrus", "volume": "350 ml", "tags": "refri", "preco": 12 }
       ]
     },
     {
