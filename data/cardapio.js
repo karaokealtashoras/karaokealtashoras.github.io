@@ -59,7 +59,7 @@ window.CARDAPIO = {
     },
     {
       "id": "cerveja-garrafa",
-      "nome": "Cervejas 600 ml",
+      "nome": "Cervejas Garrafa",
       "itens": [
         { "nome": "Cerveja Original", "volume": "600 ml", "preco": 20 },
         { "nome": "Cerveja Brahma Duplo Malte", "volume": "600 ml", "preco": 20 },
@@ -71,7 +71,7 @@ window.CARDAPIO = {
     },
     {
       "id": "cerveja-lata",
-      "nome": "Cervejas lata",
+      "nome": "Cervejas Lata",
       "itens": [
         { "nome": "Cerveja Lata Skol", "volume": "350 ml", "preco": 15 },
         { "nome": "Cerveja Lata Brahma", "volume": "350 ml", "preco": 15 },
