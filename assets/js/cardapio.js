@@ -12,12 +12,12 @@
   const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
   const normal = (s) => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
 
-  function item(i) {
+  function item(i, c) {
     const foto = i.foto
       ? `<img class="item__foto" src="../assets/img/cardapio/${esc(i.foto)}-800.webp" alt="" loading="lazy" width="64" height="64">`
       : "";
     return `
-      <li class="item${i.destaque ? " item--destaque" : ""}" data-busca="${esc(normal(`${i.nome} ${i.descricao || ""}`))}">
+      <li class="item${i.destaque ? " item--destaque" : ""}" data-busca="${esc(normal(`${i.nome} ${i.descricao || ""} ${c.nome} ${i.tags || ""}`))}">
         ${foto}
         <div class="item__txt">
           <h3>${esc(i.nome)}</h3>
@@ -29,7 +29,7 @@
 
   menu.innerHTML = dados.categorias.map((c) => {
     const casa = c.id === "batidas"
-      ? `<div class="house"><span class="material-symbols-rounded house__icon">local_bar</span><div><small>Assinatura do bar</small><strong>Batida Karaokê Altas Horas</strong></div><span class="house__preco">${moeda(c.itens.find((i) => i.nome === "Karaokê Altas Horas")?.preco)}</span></div>`
+      ? `<div class="house"><span class="material-symbols-rounded house__icon">local_bar</span><div><small>Assinatura do bar</small><strong>Batida Karaokê Altas Horas</strong></div><span class="house__preco">${moeda(c.itens.find((i) => i.nome === "Batida Karaokê Altas Horas")?.preco)}</span></div>`
       : "";
     const adicionais = c.adicionais?.length
       ? `<div class="extras"><strong>Adicionais na batata frita</strong>${c.adicionais.map((a) => `<span>${esc(a.nome.replace("Batata frita com ", ""))} <b>+ ${moeda(a.preco)}</b></span>`).join("")}</div>`
@@ -39,7 +39,7 @@
         <h2 id="t-${c.id}">${esc(c.nome)}</h2>
         ${c.nota ? `<p class="cat__nota"><span class="material-symbols-rounded">info</span>${esc(c.nota)}</p>` : ""}
         ${casa}
-        <ul class="items">${c.itens.map(item).join("")}</ul>
+        <ul class="items">${c.itens.map((i) => item(i, c)).join("")}</ul>
         ${adicionais}
       </section>`;
   }).join("");

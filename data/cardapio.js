@@ -1,8 +1,9 @@
 // Cardápio do Altas Horas Karaokê.
 // Para atualizar: edite nomes/preços abaixo e salve. "preco": null = "Consulte".
+// "tags" (opcional) = sinônimos extras para a busca.
 // "foto" usa as imagens de assets/img/cardapio/ ; "destaque": true aparece na home.
 window.CARDAPIO = {
-  "atualizado": "2026-09-25",
+  "atualizado": "2026-10-16",
   "observacoes": [
     "Algo mais? Favor consultar nossa equipe!",
     "Obrigado pela preferência! Volte sempre!"
@@ -38,30 +39,43 @@ window.CARDAPIO = {
       "nome": "Não alcoólicos",
       "itens": [
         { "nome": "Água com ou sem gás", "preco": 8 },
-        { "nome": "Refrigerante lata", "preco": 10 },
-        { "nome": "Schweppes, água tônica, H2O", "preco": 12 },
+        { "nome": "Refrigerante lata", "tags": "refri", "preco": 10 },
+        { "nome": "Schweppes", "tags": "refri", "preco": 12 },
+        { "nome": "Água tônica", "preco": 12 },
+        { "nome": "H2O", "tags": "refri", "preco": 12 },
         { "nome": "Suco de fruta", "descricao": "Verificar disponibilidade das frutas", "preco": 16 },
-        { "nome": "Red Bull", "preco": 20 },
-        { "nome": "Coquetel de frutas", "preco": 35 }
+        { "nome": "Energético Red Bull", "preco": 20 }
       ]
     },
     {
       "id": "cerveja-garrafa",
-      "nome": "Cerveja garrafa",
+      "nome": "Cervejas 600 ml",
       "itens": [
-        { "nome": "Original / Brahma Duplo Malte / Império", "descricao": "600 ml", "preco": 20 },
-        { "nome": "Heineken", "foto": "heineken", "descricao": "600 ml", "preco": 25 },
-        { "nome": "Skol / Brahma Chopp", "descricao": "600 ml", "preco": 18 }
+        { "nome": "Cerveja Original 600 ml", "preco": 20 },
+        { "nome": "Cerveja Brahma Duplo Malte 600 ml", "preco": 20 },
+        { "nome": "Cerveja Império 600 ml", "preco": 20 },
+        { "nome": "Cerveja Heineken 600 ml", "foto": "heineken", "preco": 25 },
+        { "nome": "Cerveja Skol 600 ml", "preco": 18 },
+        { "nome": "Cerveja Brahma Chopp 600 ml", "preco": 18 }
       ]
     },
     {
       "id": "cerveja-lata",
-      "nome": "Cerveja lata",
+      "nome": "Cervejas lata",
       "itens": [
-        { "nome": "Skol / Brahma", "preco": 15 },
-        { "nome": "Malzbier / Brahma Zero", "preco": 15 },
-        { "nome": "Long neck Heineken Zero", "preco": 18 },
-        { "nome": "Chopp de vinho", "preco": 23 }
+        { "nome": "Cerveja Lata Skol", "preco": 15 },
+        { "nome": "Cerveja Lata Brahma", "preco": 15 },
+        { "nome": "Cerveja Lata Malzbier", "preco": 15 },
+        { "nome": "Cerveja Lata Brahma Zero", "tags": "sem alcool", "preco": 15 }
+      ]
+    },
+    {
+      "id": "long-neck",
+      "nome": "Long neck",
+      "itens": [
+        { "nome": "Cerveja Long Neck Heineken Zero", "tags": "sem alcool", "preco": 18 },
+        { "nome": "Smirnoff Ice", "tags": "ice vodka", "preco": 25 },
+        { "nome": "Skol Beats", "preco": 25 }
       ]
     },
     {
@@ -69,9 +83,9 @@ window.CARDAPIO = {
       "nome": "Caipirinhas",
       "nota": "Verificar disponibilidade das frutas",
       "itens": [
-        { "nome": "Vodka Smirnoff", "preco": 29 },
-        { "nome": "Saquê", "preco": 29 },
-        { "nome": "Pinga", "preco": 24 }
+        { "nome": "Caipirinha de vodka Smirnoff", "tags": "caipiroska caipirosca", "preco": 29 },
+        { "nome": "Caipirinha de saquê", "tags": "caipisaque", "preco": 29 },
+        { "nome": "Caipirinha de pinga", "tags": "cachaca", "preco": 24 }
       ]
     },
     {
@@ -79,41 +93,67 @@ window.CARDAPIO = {
       "nome": "Batidas",
       "nota": "Verificar disponibilidade das frutas",
       "itens": [
-        { "nome": "Karaokê Altas Horas", "descricao": "A batida da casa", "preco": 20, "destaque": true },
-        { "nome": "Vodka Smirnoff / Saquê", "preco": 28 },
-        { "nome": "Pinga", "preco": 25 },
-        { "nome": "Espanhola", "preco": 28 },
-        { "nome": "Amarula", "preco": 28 }
+        { "nome": "Batida Karaokê Altas Horas", "descricao": "A batida da casa", "destaque": true, "preco": 20 },
+        { "nome": "Batida de vodka Smirnoff", "preco": 28 },
+        { "nome": "Batida de saquê", "preco": 28 },
+        { "nome": "Batida de pinga", "tags": "cachaca", "preco": 25 },
+        { "nome": "Batida espanhola", "preco": 28 },
+        { "nome": "Batida de amarula", "preco": 28 }
+      ]
+    },
+    {
+      "id": "whisky",
+      "nome": "Whisky",
+      "itens": [
+        { "nome": "Whisky Johnnie Walker Black Label", "tags": "uisque dose", "preco": 35 },
+        { "nome": "Whisky Johnnie Walker Red Label", "tags": "uisque dose", "preco": 30 },
+        { "nome": "Whisky Passport", "tags": "uisque dose", "preco": 25 }
+      ]
+    },
+    {
+      "id": "doses",
+      "nome": "Destilados e cachaças",
+      "itens": [
+        { "nome": "Vodka Smirnoff", "tags": "dose", "preco": 25 },
+        { "nome": "Rum", "tags": "dose", "preco": 25 },
+        { "nome": "Gin", "tags": "dose", "preco": 25 },
+        { "nome": "Tequila", "tags": "dose", "preco": 30 },
+        { "nome": "Cachaça Ypióca", "tags": "pinga dose", "preco": 20 },
+        { "nome": "Cachaça Seleta", "tags": "pinga dose", "preco": 20 },
+        { "nome": "Cachaça Boazinha", "tags": "pinga dose", "preco": 20 },
+        { "nome": "Cachaça São Francisco", "tags": "pinga dose", "preco": 15 },
+        { "nome": "Cachaça Kariri com mel", "tags": "pinga dose", "preco": 20 }
+      ]
+    },
+    {
+      "id": "aperitivos",
+      "nome": "Aperitivos e licores",
+      "itens": [
+        { "nome": "Campari", "tags": "dose", "preco": 25 },
+        { "nome": "Martini", "tags": "dose vermute", "preco": 20 },
+        { "nome": "Cynar", "tags": "dose", "preco": 20 },
+        { "nome": "Underberg", "tags": "dose", "preco": 25 },
+        { "nome": "Jurupinga", "tags": "dose", "preco": 15 },
+        { "nome": "Rabo de galo", "descricao": "Cynar com pinga", "tags": "dose", "preco": 20 },
+        { "nome": "Maria Mole", "tags": "dose", "preco": 20 }
       ]
     },
     {
       "id": "conhaque",
       "nome": "Conhaque",
       "itens": [
-        { "nome": "Domecq", "preco": 25 },
-        { "nome": "Dreher", "preco": 20 },
-        { "nome": "Dreher com limão e mel", "preco": 25 },
-        { "nome": "Dreher com menta", "preco": 25 }
+        { "nome": "Conhaque Domecq", "tags": "dose", "preco": 25 },
+        { "nome": "Conhaque Dreher", "tags": "dose", "preco": 20 },
+        { "nome": "Conhaque Dreher com limão e mel", "tags": "dose", "preco": 25 },
+        { "nome": "Conhaque Dreher com menta", "tags": "dose", "preco": 25 }
       ]
     },
     {
-      "id": "doses",
-      "nome": "Bebidas quentes",
+      "id": "drinks",
+      "nome": "Outros drinks",
       "itens": [
-        { "nome": "Johnnie Walker Black Label", "preco": 35 },
-        { "nome": "Johnnie Walker Red Label", "preco": 30 },
-        { "nome": "Passport", "preco": 25 },
-        { "nome": "Rum, Gin", "preco": 25 },
-        { "nome": "Campari, Vodka Smirnoff", "preco": 25 },
-        { "nome": "Underberg", "preco": 25 },
-        { "nome": "Tequila", "preco": 30 },
-        { "nome": "Smirnoff Ice / Skol Beats", "preco": 25 },
-        { "nome": "Kariri com mel, Martini", "preco": 20 },
-        { "nome": "São Francisco, Jurupinga", "preco": 15 },
-        { "nome": "Rabo de galo", "descricao": "Cynar com pinga", "preco": 20 },
-        { "nome": "Maria Mole", "preco": 20 },
-        { "nome": "Cynar", "preco": 20 },
-        { "nome": "Ypióca / Seleta / Boazinha", "preco": 20 }
+        { "nome": "Chopp de vinho", "preco": 23 },
+        { "nome": "Coquetel de frutas", "preco": 35 }
       ]
     },
     {
