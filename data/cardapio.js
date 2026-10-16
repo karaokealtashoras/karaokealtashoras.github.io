@@ -53,6 +53,7 @@ window.CARDAPIO = {
         { "nome": "Refrigerante Lata Coca-Cola", "volume": "350 ml", "descricao": "Tradicional ou zero", "tags": "refri coca", "preco": 10 },
         { "nome": "Refrigerante Lata Guaraná Antarctica", "volume": "350 ml", "descricao": "Tradicional ou zero", "tags": "refri guarana antartica", "preco": 10 },
         { "nome": "Refrigerante Lata Fanta", "volume": "350 ml", "tags": "refri", "preco": 10 },
+        { "nome": "Refrigerante Lata Sprite", "volume": "350 ml", "tags": "refri", "preco": 10 },
         { "nome": "Schweppes Citrus", "volume": "350 ml", "tags": "refri", "preco": 12 }
       ]
     },
