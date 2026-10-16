@@ -69,9 +69,9 @@ window.CARDAPIO = {
       "nome": "Caipirinhas",
       "nota": "Verificar disponibilidade das frutas",
       "itens": [
-        { "nome": "Vodka Smirnoff", "preco": 25 },
-        { "nome": "Saquê", "preco": 25 },
-        { "nome": "Pinga", "preco": 20 }
+        { "nome": "Vodka Smirnoff", "preco": 29 },
+        { "nome": "Saquê", "preco": 29 },
+        { "nome": "Pinga", "preco": 24 }
       ]
     },
     {
