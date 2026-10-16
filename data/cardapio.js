@@ -75,9 +75,9 @@ window.CARDAPIO = {
       "id": "long-neck",
       "nome": "Long neck",
       "itens": [
-        { "nome": "Cerveja Long Neck Heineken Zero", "tags": "sem alcool", "preco": 18 },
-        { "nome": "Smirnoff Ice", "tags": "ice vodka", "preco": 25 },
-        { "nome": "Skol Beats", "preco": 25 }
+        { "nome": "Cerveja Heineken Zero", "volume": "330 ml", "tags": "sem alcool", "preco": 18 },
+        { "nome": "Vodka Smirnoff Ice", "volume": "275 ml", "tags": "ice vodka", "preco": 25 },
+        { "nome": "Skol Beats", "volume": "269 ml", "preco": 25 }
       ]
     },
     {
@@ -106,6 +106,7 @@ window.CARDAPIO = {
     {
       "id": "whisky",
       "nome": "Whisky",
+      "nota": "Valores por dose",
       "itens": [
         { "nome": "Whisky Johnnie Walker Black Label", "tags": "uisque dose", "preco": 35 },
         { "nome": "Whisky Johnnie Walker Red Label", "tags": "uisque dose", "preco": 30 },
@@ -145,6 +146,7 @@ window.CARDAPIO = {
     {
       "id": "conhaque",
       "nome": "Conhaque",
+      "nota": "Valores por dose",
       "itens": [
         { "nome": "Conhaque Domecq", "tags": "dose", "preco": 25 },
         { "nome": "Conhaque Dreher", "tags": "dose", "preco": 20 },
